@@ -13,7 +13,7 @@ import {
   IconTablePlus,
   IconTrash,
 } from "@tabler/icons-react";
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import ThemeButton from "./theme-button";
@@ -28,7 +28,7 @@ export default function Navbar() {
   const [nav, setNav] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
-  const { session, loading } = useSession();
+  const { session } = useSession();
 
   console.log(session);
   // @ts-expect-error user not defined
@@ -58,7 +58,7 @@ export default function Navbar() {
           </p>
           <p className="flex items-center gap-2">
             <IconSquareRoundedCheck className="size-5" /> Mark a task as
-            completed by dragging its card to the "Completed" column.
+            completed by dragging its card to the &quot;Completed&quot; column.
           </p>
           <p className="flex items-center gap-2">
             <IconTablePlus className="size-5" /> Create custom columns to

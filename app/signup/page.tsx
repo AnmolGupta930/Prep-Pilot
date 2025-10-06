@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import Logo from "../components/logo";
 import Link from "next/link";
-import { IconBrandGoogleFilled, IconChevronLeft } from "@tabler/icons-react";
+import { IconChevronLeft } from "@tabler/icons-react";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { supabase } from "../../client/supabaseClient";
 import { useRouter } from "next/navigation";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
 
   const SignupFormSchema = z.object({
@@ -95,7 +95,8 @@ export default function page() {
 
   const students = [{ value: "11th" }, { value: "12th" }, { value: "Dropper" }];
 
-  const onRadioChange = (e: any) => {
+  // @ts-expect-error ts any 
+  const onRadioChange = (e) => {
     setAcademic(e.target.value);
     setShow(true);
   };

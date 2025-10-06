@@ -11,8 +11,8 @@ type CardData = {
   title: string;
   column: string;
   columnId?: string;
-  position?: String;
-  page?: String;
+  position?: string;
+  page?: string;
 };
 
 export default function ClientKanbanPage() {

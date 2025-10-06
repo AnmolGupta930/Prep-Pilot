@@ -29,12 +29,12 @@ function generateCountdownString(targetDateString) {
         countdownText = parts.join(' & ') + ' left for the JEE January 2026 attempt !';
     }
 
-    const targetDateFormatted = new Date(targetDateString).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'long'
-    });
+    // const targetDateFormatted = new Date(targetDateString).toLocaleDateString('en-US', {
+    //     year: 'numeric',
+    //     month: 'long',
+    //     day: 'numeric',
+    //     weekday: 'long'
+    // });
 
     return ` ${countdownText}`;
 }

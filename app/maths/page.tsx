@@ -11,11 +11,11 @@ type CardData = {
   title: string;
   column: string;
   columnId?: string;
-  position?: String;
-  page?: String;
+  position?: string;
+  page?: string;
 };
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const { session, loading } = useSession();
   const [cards, setCards] = useState<CardData[]>([]);

@@ -7,7 +7,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { supabase } from "@/client/supabaseClient";
 import { useRouter } from "next/navigation";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
 
   //signin form---------------------------------
@@ -116,7 +116,7 @@ export default function page() {
             <button
               className="bg-foreground disabled:bg-muted-foreground hover:bg-foreground/90 text-background mt-4 mb-1 flex cursor-pointer items-center justify-center gap-2 rounded-lg p-2 font-sans text-sm font-semibold disabled:cursor-not-allowed"
               type="submit"
-              // @ts-ignore
+              // @ts-expect-error disable can only be boolean
               disabled={errors.email || errors.password || isSubmitting}
             >
               <IconMail className="size-5" />
@@ -130,7 +130,7 @@ export default function page() {
           </button> */}
 
           <h4 className="text-foreground flex gap-2 font-sans text-sm font-medium">
-            Don't have an account?
+            Don&apos;t have an account?
             <Link
               href={"/signup"}
               target="_self"

@@ -2,10 +2,10 @@
 import React, { useEffect } from "react";
 import { stagger, useAnimate, motion } from "motion/react";
 
-export default function animatedText({ text }: { text: String }) {
+export default function AnimatedText({ text }: { text: String }) {
   useEffect(() => {
     startAnimating();
-  }, []);
+  });
 
   const [scope, animate] = useAnimate();
 
