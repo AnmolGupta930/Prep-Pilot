@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id       String   @id @default(uuid())
+  email    String   @unique @db.VarChar(255)
+  name     String   @db.VarChar(255)
+  coach    String   @db.VarChar(255)
+  city     String   @db.VarChar(255)
+  academic String   @db.VarChar(255)
+  Column   Column[]
+  Todo     Todo[]
+}
+
+model Chapters {
+  id      String @id @default(uuid())
+  title   String @db.VarChar(255)
+  subject String @db.VarChar(255)
+  column  String @db.VarChar(255)
+}
+
+model Column {
+  id     String @id @default(dbgenerated("gen_random_uuid()"))
+  title  String @db.VarChar(255)
+  userId String @default(dbgenerated("auth.uid()")) @map("user_id")
+  page   String
+  User   User   @relation(fields: [userId], references: [id])
+  todos  Todo[]
+}
+
+model Todo {
+  id       String @id @default(dbgenerated("gen_random_uuid()"))
+  title    String @db.VarChar(255)
+  columnId String
+  userId   String @default(dbgenerated("auth.uid()")) @map("user_id")
+  page     String
+  column   Column @relation(fields: [columnId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  User     User   @relation(fields: [userId], references: [id])
+}
