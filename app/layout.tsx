@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "./components/Navbar";
 import DndTouch from "./utils/dndtouch";
 import { SessionProvider } from "./utils/session-provider";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,11 +39,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Prep Pilot",
     description: "Move from endless planning to focused preparation.",
-    url: "", // URL
+    url: "https://prep-pilot-jee.vercel.app/", // URL
     siteName: "Prep Pilot",
     images: [
       {
-        url: "http://localhost:3000/open-graph.png", //image
+        url: "https://prep-pilot-jee.vercel.app/open-graph.png", //image
         width: 1200,
         height: 630,
         alt: "Prep Pilot",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     title: "Prep Pilot",
     description: "Move from endless planning to focused preparation.",
     creator: "@anmol__003",
-    images: [""], //image
+    images: ["https://prep-pilot-jee.vercel.app/open-graph.png"], //image
   },
   icons: {
     icon: "/favicon.ico",

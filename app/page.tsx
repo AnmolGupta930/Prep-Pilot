@@ -131,7 +131,7 @@ export default function Home() {
                 alt="hero image"
                 width={1000}
                 height={1000}
-                src={"/herow.png"}
+                src={"/hero.png"}
               ></Image>
             </Magnet>
             <div className="absolute -top-3 -left-3">
