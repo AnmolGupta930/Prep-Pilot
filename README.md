@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [Prep Pilot](https://prep-pilot-jee.vercel.app/) 
+  ### A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
+  <img src="https://prep-pilot-jee.vercel.app/open-graph.png" alt="Prep Pilot">
 
-## Getting Started
+## Overview
 
-First, run the development server:
+### 🎯 The Mission
+- The JEE syllabus is vast and overwhelming. Juggling Physics, Chemistry, and Mathematics, along with constant revisions, can lead to chaos and burnout. Prep Pilot is built to solve this problem by providing a clean, visual, and intuitive way to manage your entire preparation on a single dashboard.
+- Inspired by agile project management, this tool helps you treat your JEE prep like a project, moving chapters from "To-Do" to "In Progress" and finally to "Completed," giving you a clear sense of accomplishment and a bird's-eye view of your progress.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### ✨ Key Features
+- **Interactive Kanban Boards**: Separate, dedicated boards for Physics, Chemistry, and Mathematics.
+- **Drag & Drop Interface**: Effortlessly move chapters between columns (To-Do, In Progress, Done, Revision) to update your status.
+- **Secure Authentication**: User accounts are securely managed using Supabase Auth, ensuring your progress data is safe and private.
+- **Persistent Data**: Your board state is saved in a Supabase database, so your progress is always up-to-date across sessions.
+- **Visual Progress Tracking**: Quickly identify what's pending, what you're currently studying, and what you've mastered.
+- **Fully Responsive**: Built with a mobile-first approach, so you can track your prep on your laptop, tablet, or phone.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🛠️ Technology Stack
+ #### This project is built with a modern, performant, and scalable tech stack:
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Backend & Authentication**: Supabase
+- **UI Library**: React

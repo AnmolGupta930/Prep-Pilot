@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <div className="bg-background absolute top-0 left-0 z-50 flex min-h-screen w-full flex-col items-center">
-        <nav className="bg-card/20 border-border fixed z-50 flex w-full flex-col gap-4 border-b px-8 py-4 backdrop-blur-3xl max-md:px-3 max-sm:static">
+        <nav className="bg-card/20 border-border fixed z-50 flex w-full flex-col gap-4 border-b px-8 py-4 backdrop-blur-3xl max-md:px-3">
           <div className="flex flex-row items-center justify-between max-sm:flex-col">
             <div className="flex w-full justify-between">
               <Link href={"/"} className="flex items-center gap-2">
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
 
             <div
-              className={`flex items-center gap-2 ${nav ? "max-sm:hidden" : "max-sm:flex"}`}
+              className={`flex items-center gap-2 ${nav ? "max-sm:hidden" : "pt-4 max-sm:flex"}`}
             >
               <ThemeButton />
               <Link
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
         </nav>
 
-        <div className="text-foreground border-border flex flex-col items-center justify-start gap-5 border-x pt-40 pb-20 text-center max-lg:border-0 max-sm:gap-3 max-sm:px-2 max-sm:pt-10 max-sm:pb-8 md:px-2 lg:min-w-[1280px]">
+        <div className="text-foreground border-border mt-18 flex flex-col items-center justify-start gap-5 border-x py-35 text-center max-lg:border-0 max-sm:mt-16 max-sm:gap-3 max-sm:px-2 max-sm:py-25 md:px-2 lg:min-w-[1280px]">
           <motion.p
             animate={{
               backgroundPosition: ["200%", "-200%"],
@@ -148,8 +148,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="text-foreground border-border flex flex-col items-center justify-start gap-5 border-x py-10 max-lg:border-0 max-sm:gap-3 max-sm:py-8 lg:min-w-[1280px]">
-          <p className=""></p>
+        <div className="text-foreground border-border flex flex-col items-center justify-start gap-5 border-x py-15 max-lg:border-0 max-sm:gap-3 max-sm:py-10 lg:min-w-[1280px]">
           <motion.p
             animate={{
               backgroundPosition: ["200%", "-200%"],
@@ -171,7 +170,7 @@ export default function Home() {
           </div>
         </div>
         <div className="border-border text-foreground w-full border-y">
-          <div className="border-border mx-auto max-w-[1280px] p-4 max-sm:p-2">
+          <div className="border-border px-8 py-4 max-md:px-3 max-md:py-4">
             <p>© 2025 Prep Pilot. Made by Anmol.</p>
           </div>
         </div>
