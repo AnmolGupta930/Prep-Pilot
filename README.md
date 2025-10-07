@@ -1,5 +1,5 @@
 # [Prep Pilot](https://prep-pilot-jee.vercel.app/) 
-  ### A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
+  ### Move from endless planning to focused preparation.  
   <img src="https://prep-pilot-jee.vercel.app/open-graph.png" alt="Prep Pilot">
 
 ## Overview
