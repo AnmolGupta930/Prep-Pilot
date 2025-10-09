@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "./components/Navbar";
 import DndTouch from "./utils/dndtouch";
 import { SessionProvider } from "./utils/session-provider";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,6 +85,7 @@ export default function RootLayout({
             <div className="bg-background bgpattern flex h-screen w-full flex-col p-4 max-sm:p-0">
               <Navbar />
               <DndTouch />
+              <Analytics />
               {children}
             </div>
           </ThemeProvider>
